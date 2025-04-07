@@ -48,22 +48,28 @@ It involves fetching HTML content from web pages and then parsing and extracting
 03. Once written your script might not work if the website changes.
 
 
+# Request module:- 
+
+Request module is used to send HTTP request to any server and receive the HTTP response back.
+
+we require URL of the wesite to make request.
+
+# Get request:-
+
+-It is used to retrieve inforamtion webpage using a URL.
+
+Ex Getting live source of cricket match.
+
+# POST request:-
+
+-It is used to send information to a URL.
+
+-Sumbiting a form  with inforamtion
 
 
+Making Request:-
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Sytax:- request.get(URL)
 
 # 🔧 Python Libraries for Web Scraping (Basic to Advanced)
 
