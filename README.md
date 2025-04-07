@@ -66,6 +66,15 @@ Ex Getting live source of cricket match.
 
 -Sumbiting a form  with inforamtion
 
+python code
+import requests
+
+import bs4
+
+response = requests.get("http://books.toscrape.com/")
+
+print(response)
+
 
 Making Request:-
 
