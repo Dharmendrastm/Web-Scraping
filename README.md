@@ -1,4 +1,4 @@
-What is web scraping?
+# What is web scraping?
 
 In a simple words, webscraping is a process of extracting data from websites.
 
@@ -8,7 +8,7 @@ It involves fetching HTML content from web pages and then parsing and extracting
 ** HTTP Response :- status code, metadata, html code to render on web browser, multi-media files.
 
 
-There are mainly three steps 
+# There are mainly three steps 
 
 1. HTTP Request Using Python Program.
 
@@ -17,7 +17,7 @@ There are mainly three steps
 3. Data processing and storing
 
 
-#Steps involved in web scraping.
+# Steps involved in web scraping.
 
 01. Fetching HTML Content
 
@@ -33,12 +33,19 @@ There are mainly three steps
 2. Basic of HTML
 
 
-Tools required 
+# Tools required 
 1. python
 2. PIP Tool to install required libraries
 
 
 
+# Rules for Scraping 
+ 
+ 1. Follow term & conditions of website
+
+ 2. Do not make so much requests at a time
+
+03. Once written your script might not work if the website changes.
 
 
 
