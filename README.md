@@ -1,3 +1,63 @@
+What is web scraping?
+
+In a simple words, webscraping is a process of extracting data from websites.
+
+It involves fetching HTML content from web pages and then parsing and extracting desired information from that content.
+
+
+** HTTP Response :- status code, metadata, html code to render on web browser, multi-media files.
+
+
+There are mainly three steps 
+
+1. HTTP Request Using Python Program.
+
+2. Extracting useful data
+
+3. Data processing and storing
+
+
+#Steps involved in web scraping.
+
+01. Fetching HTML Content
+
+02. Parsing HTML
+
+03. Extracting useful data
+
+04. Data processing and storing
+
+# Pre-requisites:- 
+
+1. Python programming language.
+2. Basic of HTML
+
+
+Tools required 
+1. python
+2. PIP Tool to install required libraries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 🔧 Python Libraries for Web Scraping (Basic to Advanced)
 
 | 📦 Library Name     | 📄 Kaam Kya Hai? |
@@ -16,7 +76,6 @@
 
 ### ✅ Beginner ke liye Required:
 
-Bas yeh 3 kaafi hain:
 ```bash
 pip install requests beautifulsoup4 lxml
 ```
