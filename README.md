@@ -207,3 +207,110 @@ scrapy crawl quotes -o quotes.json
 
 ---
 
+Bhai tu poochh raha hai ki agar hume **naam (name)**, **email address**, aur **phone number** scrape karna ho, to **code me kya likhenge**?
+
+To main tujhe simple se samjhaata hoon — bas website ka HTML structure samajhna padta hai, aur usme se data **class ya tag** ke through nikalte hain.
+
+---
+
+## ✅ Generic Example: Name, Email & Phone Extract Karna
+
+### 🧠 Step 1: Soch le HTML kuch aisa hai:
+```html
+<div class="contact">
+  <h2 class="name">Dharmendra</h2>
+  <p class="email">dharmendra@example.com</p>
+  <span class="phone">+91-9876543210</span>
+</div>
+```
+
+---
+
+### 🔍 Step 2: Python Code to Extract This
+
+```python
+from bs4 import BeautifulSoup
+
+html = '''
+<div class="contact">
+  <h2 class="name">Dharmendra</h2>
+  <p class="email">dharmendra@example.com</p>
+  <span class="phone">+91-9876543210</span>
+</div>
+'''
+
+soup = BeautifulSoup(html, "html.parser")
+
+# Extracting fields
+name = soup.find("h2", class_="name").text
+email = soup.find("p", class_="email").text
+phone = soup.find("span", class_="phone").text
+
+print("Name:", name)
+print("Email:", email)
+print("Phone:", phone)
+```
+
+---
+
+## 🧪 Output:
+```
+Name: Dharmendra
+Email: dharmendra@example.com
+Phone: +91-9876543210
+```
+
+---
+
+## 🤖 Real Website Example (if available)
+
+Agar kisi real website me aise data hai:
+
+```html
+<div class="profile">
+   <span>Name: <b>Ravi Kumar</b></span>
+   <span>Email: <b>ravi@xyz.com</b></span>
+   <span>Phone: <b>1234567890</b></span>
+</div>
+```
+
+Then:
+
+```python
+name = soup.find_all("b")[0].text
+email = soup.find_all("b")[1].text
+phone = soup.find_all("b")[2].text
+```
+
+---
+
+## 💡 Tip:
+Agar tag ya class nahi mil raha, to:
+```python
+soup.find(text="Email:").find_next("b").text
+```
+
+Ya phir **regular expressions (re module)** ka use bhi hota hai advanced use me.
+
+---
+
+## 🧩 Bonus: Email & Phone with Regex (HTML ke bina bhi)
+
+Agar page me scattered email/phone ho, use this:
+
+```python
+import re
+
+html = "<p>Contact us at dharma@example.com or call +91-9999988888</p>"
+
+emails = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", html)
+phones = re.findall(r"\+?\d[\d\- ]{8,}\d", html)
+
+print("Emails:", emails)
+print("Phones:", phones)
+```
+
+---
+
+
+
