@@ -143,4 +143,3 @@ import csv
 
 ---
 
-Want me to combine this into a PDF, infographic, or starter project template?
